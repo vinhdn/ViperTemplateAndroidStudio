@@ -12,4 +12,4 @@
 This is tools auto generate all files of a module VIPER (include Dagger Components, Dagger Module, Retrofit API Service, Interactor, Presenter, Router, View, Fragment)
 
 ## How to install
-- clone all files and import to ```sh C:\Program Files\Android\Android Studio\plugins\android\lib\templates\other\viper ```
+- clone all files and import to ```C:\Program Files\Android\Android Studio\plugins\android\lib\templates\other\viper ```
