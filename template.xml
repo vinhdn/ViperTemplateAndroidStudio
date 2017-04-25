@@ -1,0 +1,43 @@
+<template format="4"
+		revision="1"
+		name="Viper template Ominext"
+		description="Creates a new VIPER classes - View, Interactor, Presenter, Entity (Model), Router">
+
+	<category value="Ominext"/>
+
+	<parameter id="moduleName"
+		name="Functionality Name"
+		type="string"
+		constraints="class|unique|nonempty"
+		default="Function"
+		help="The name of the functionality that requires VIPER views"/>
+
+		<parameter
+        id="includeLayout"
+        name="Create layout XML?"
+        type="boolean"
+        default="true"
+        help="Generate a layout XML for the fragment" />
+
+		<parameter
+						id="includeActivity"
+						name="Create Activity?"
+						type="boolean"
+						default="false"
+						help="Generate a Activity for the fragment" />
+
+						<parameter
+										id="includeAdapter"
+										name="Create Adapter?"
+										type="boolean"
+										default="false"
+										help="Generate a Adapter for the fragment" />
+	<globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+		<thumbs>
+				<!-- default thumbnail is required -->
+				<thumb>viper.png</thumb>
+		</thumbs>
+
+</template>
