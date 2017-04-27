@@ -16,14 +16,14 @@ import ${packageName}.components.view.adapter.viewholders.BaseHolder;
 
 import java.util.List;
 
-import rx.functions.Func1;
+import io.reactivex.functions.Function;
 /**
 * Adapter template
 * You must replace BaseModel with your Adapter model
 **/
 public class ${className}Adapter extends BaseAdapter<BaseModel, ${className}Adapter.${className}Holder>{
 
-    public ${className}Adapter(@NonNull List items, @NonNull Func1 func0) {
+    public ${className}Adapter(@NonNull List items, @NonNull Function func0) {
         super(items, func0);
     }
 
