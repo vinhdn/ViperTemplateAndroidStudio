@@ -3,7 +3,7 @@ package ${packageName}.modules.${slashedPackageName(classNameLower)}.interactor;
 ${userCreate}
 
 import ${packageName}.components.interactor.BaseInteractorImpl;
-import ${packageName}.manager.network.Api{className};
+import ${packageName}.manager.network.api.Api${className};
 
 import javax.inject.Inject;
 
@@ -14,9 +14,9 @@ import javax.inject.Inject;
 public class ${interactorClass}Impl extends BaseInteractorImpl implements ${interactorClass} {
 
     @Inject
-    Api${className} api{className};
+    Api${className} api${className};
 
-    public ${interactorClass}Impl(Api${className} api{className}) {
-        this.api{className} = api{className};
+    public ${interactorClass}Impl(Api${className} api${className}) {
+        this.api${className} = api${className};
     }
 }
