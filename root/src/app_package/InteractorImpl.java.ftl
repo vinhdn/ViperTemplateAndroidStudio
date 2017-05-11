@@ -2,8 +2,8 @@ package ${packageName}.modules.${slashedPackageName(classNameLower)}.interactor;
 
 ${userCreate}
 
-import ${packageName}.components.interactor.BaseInteractorImpl;
-import ${packageName}.manager.network.api.Api${className};
+import ${packageName}.components.base.interactor.BaseInteractorImpl;
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.api.Api${className};
 
 import javax.inject.Inject;
 

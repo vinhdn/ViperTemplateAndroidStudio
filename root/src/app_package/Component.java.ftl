@@ -1,9 +1,10 @@
-package ${packageName}.application.di.component;
+package ${packageName}.modules.${slashedPackageName(classNameLower)}.di.component;
 
-import ${packageName}.application.di.ViewScope;
-import ${packageName}.application.di.module.${className}Module;
+import ${packageName}.components.base.di.ViewScope;
+import ${packageName}.components.base.di.component.ApplicationComponent;
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.module.${className}Module;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.fragment.${className}Fragment;
-import ${packageName}.manager.network.api.Api${className};
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.api.Api${className};
 
 import dagger.Component;
 

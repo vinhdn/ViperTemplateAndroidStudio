@@ -1,4 +1,4 @@
-package ${packageName}.manager.network.api;
+package ${packageName}.modules.${slashedPackageName(classNameLower)}.api;
 
 public interface Api${className} {
 

@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 <#if applicationPackage??>
 import ${applicationPackage}.R;
 </#if>
-import ${packageName}.components.model.BaseModel;
-import ${packageName}.components.view.adapter.BaseAdapter;
-import ${packageName}.components.view.adapter.viewholders.BaseHolder;
+import ${packageName}.components.base.model.BaseModel;
+import ${packageName}.components.base.view.adapter.BaseAdapter;
+import ${packageName}.components.base.view.adapter.viewholders.BaseHolder;
 
 import java.util.List;
 

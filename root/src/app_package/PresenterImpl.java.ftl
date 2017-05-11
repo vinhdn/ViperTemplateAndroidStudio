@@ -4,7 +4,7 @@ ${userCreate}
 
 import android.os.Bundle;
 
-import ${packageName}.components.presenter.BasePresenterImpl;
+import ${packageName}.components.base.presenter.BasePresenterImpl;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.interactor.${interactorClass};
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.router.${routerClass};
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.${viewClass};

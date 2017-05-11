@@ -9,9 +9,9 @@ import butterknife.ButterKnife;
 import ${applicationPackage}.R;
 </#if>
 import ${packageName}.application.App;
-import ${packageName}.application.di.component.Dagger${className}Component;
-import ${packageName}.application.di.module.${className}Module;
-import ${packageName}.components.view.activity.BaseActivity;
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.component.Dagger${className}Component;
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.module.${className}Module;
+import ${packageName}.components.base.view.activity.BaseActivity;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.fragment.${className}Fragment;
 
 public class ${className}Activity extends BaseActivity {

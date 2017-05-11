@@ -2,7 +2,7 @@ package ${packageName}.modules.${slashedPackageName(classNameLower)}.router;
 
 ${userCreate}
 
-import ${packageName}.components.router.BaseRouterImpl;
+import ${packageName}.components.base.router.BaseRouterImpl;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.fragment.${fragmentClass};
 
 /**

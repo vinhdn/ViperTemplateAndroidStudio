@@ -1,4 +1,4 @@
-package ${packageName}.application.di.module;
+package ${packageName}.modules.${slashedPackageName(classNameLower)}.di.module;
 
 ${userCreate}
 
@@ -11,7 +11,7 @@ import ${packageName}.modules.${slashedPackageName(classNameLower)}.presenter.${
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.router.${className}Router;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.router.${className}RouterImpl;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.fragment.${className}Fragment;
-import ${packageName}.manager.network.api.Api${className};
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.api.Api${className};
 import ${packageName}.manager.network.convertresponse.JWTConverterFactory;
 
 import dagger.Module;

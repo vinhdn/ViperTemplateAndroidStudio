@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <recipe>
 	<instantiate from="src/app_package/Module.java.ftl"
-									 to="${escapeXmlAttribute(srcOut)}/application/di/module/${moduleClass}.java" />
-									 
+									 to="${escapeXmlAttribute(srcOut)}/modules/${slashedPackageName(classNameLower)}/di/module/${moduleClass}.java" />
+
 	<instantiate from="src/app_package/ApiService.java.ftl"
-								to="${escapeXmlAttribute(srcOut)}/manager/network/api/Api${className}.java" />
+								to="${escapeXmlAttribute(srcOut)}/modules/${slashedPackageName(classNameLower)}/api/Api${className}.java" />
 
 	<instantiate from="src/app_package/Component.java.ftl"
-									to="${escapeXmlAttribute(srcOut)}/application/di/component/${componentClass}.java" />
+									to="${escapeXmlAttribute(srcOut)}/modules/${slashedPackageName(classNameLower)}/di/component/${componentClass}.java" />
 
 	<instantiate from="src/app_package/View.java.ftl"
                    to="${escapeXmlAttribute(srcOut)}/modules/${slashedPackageName(classNameLower)}/view/${viewClass}.java" />

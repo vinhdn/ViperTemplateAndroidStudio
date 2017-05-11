@@ -14,9 +14,9 @@ import android.widget.EditText;
 import ${applicationPackage}.R;
 </#if>
 import ${packageName}.application.App;
-import ${packageName}.application.di.component.Dagger${className}Component;
-import ${packageName}.application.di.module.${className}Module;
-import ${packageName}.components.view.fragment.BaseFragment;
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.component.Dagger${className}Component;
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.module.${className}Module;
+import ${packageName}.components.base.view.fragment.BaseFragment;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.presenter.${className}Presenter;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.presenter.${className}PresenterImpl;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.${className}View;
