@@ -12,7 +12,10 @@ import ${packageName}.application.App;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.component.Dagger${className}Component;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.module.${className}Module;
 import ${packageName}.components.base.view.activity.BaseActivity;
+import ${packageName}.components.base.presenter.BasePresenter;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.fragment.${className}Fragment;
+
+import android.support.v4.app.FragmentManager;
 
 public class ${className}Activity extends BaseActivity {
 
@@ -31,5 +34,15 @@ public class ${className}Activity extends BaseActivity {
     @Override
     public int getCurrentFrameLayoutId() {
         return R.id.framelayout;
+    }
+
+    @Override
+    public BasePresenter getPresenter() {
+        return null;
+    }
+
+    @Override
+    public FragmentManager getCurrentFragmentManager(){
+        return fragment.getCurrentFragmentManager();
     }
 }

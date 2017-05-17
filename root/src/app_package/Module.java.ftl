@@ -4,6 +4,7 @@ ${userCreate}
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import ${packageName}.components.base.model.parse.StringDeserializers;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.interactor.${className}Interactor;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.interactor.${className}InteractorImpl;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.presenter.${className}Presenter;
@@ -60,6 +61,7 @@ public class ${className}Module {
     @Provides
     public Api${className} provideApi${className}(Retrofit.Builder builder) {
         Gson gson = new GsonBuilder()
+                .registerTypeAdapter(String.class, StringDeserializers.getStringDeserializers())
                 .excludeFieldsWithoutExposeAnnotation().create();
         Retrofit retrofit = builder.addConverterFactory(JWTConverterFactory.create(gson)).build();
         return retrofit.create(Api${className}.class);

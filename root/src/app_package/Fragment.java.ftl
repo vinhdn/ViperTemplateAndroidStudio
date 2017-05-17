@@ -16,6 +16,7 @@ import ${applicationPackage}.R;
 import ${packageName}.application.App;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.component.Dagger${className}Component;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.module.${className}Module;
+import ${packageName}.components.base.presenter.BasePresenter;
 import ${packageName}.components.base.view.fragment.BaseFragment;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.presenter.${className}Presenter;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.presenter.${className}PresenterImpl;
@@ -68,4 +69,8 @@ public class ${className}Fragment extends BaseFragment implements ${className}Vi
         return R.id.framelayout;
     }
 
+    @Override
+    public BasePresenter getPresenter() {
+        return presenter;
+    }
 }
