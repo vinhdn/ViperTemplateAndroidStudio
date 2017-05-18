@@ -36,7 +36,7 @@
     <execute file="recipe.xml.ftl" />
 
 		<thumbs>
-				<!-- default thumbnail is required -->
+				<!-- default thumbnail is required (vinh) -->
 				<thumb>viper.png</thumb>
 		</thumbs>
 
