@@ -19,6 +19,8 @@ import android.support.v4.app.FragmentManager;
 
 public class ${className}Activity extends BaseActivity {
 
+    ${className}Fragment fragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +29,10 @@ public class ${className}Activity extends BaseActivity {
         ButterKnife.bind(this);
 
         //Replace Fragment in first layout
-        if(savedInstanceState == null)
-            changeFragment(${className}Fragment.getInstance(), false);
+        if(savedInstanceState == null){
+            fragment = ${className}Fragment.getInstance();
+            changeFragment(fragment, false);
+        }
     }
 
     @Override
@@ -43,6 +47,9 @@ public class ${className}Activity extends BaseActivity {
 
     @Override
     public FragmentManager getCurrentFragmentManager(){
-        return fragment.getCurrentFragmentManager();
+        if(fragment != null && fragment.isAdded()){
+             return fragment.getChildFragmentManager();
+        }
+         return getSupportFragmentManager();
     }
 }
