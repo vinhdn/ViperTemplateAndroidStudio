@@ -12,6 +12,7 @@ import ${packageName}.modules.${slashedPackageName(classNameLower)}.presenter.${
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.router.${className}Router;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.router.${className}RouterImpl;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.fragment.${className}Fragment;
+import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.${className}View;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.api.Api${className};
 import ${packageName}.manager.network.convertresponse.JWTConverterFactory;
 
@@ -25,9 +26,9 @@ import retrofit2.Retrofit;
 @Module
 public class ${className}Module {
 
-    ${className}Fragment view;
+    ${className}View view;
 
-    public ${className}Module(${className}Fragment view) {
+    public ${className}Module(${className}View view) {
         this.view = view;
     }
 
