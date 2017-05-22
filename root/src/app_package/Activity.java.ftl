@@ -14,6 +14,7 @@ import ${packageName}.modules.${slashedPackageName(classNameLower)}.di.module.${
 import ${packageName}.components.base.view.activity.BaseActivity;
 import ${packageName}.components.base.presenter.BasePresenter;
 import ${packageName}.modules.${slashedPackageName(classNameLower)}.view.fragment.${className}Fragment;
+import ${packageName}.modules.tabbar.view.fragment.TabbarFragment;
 
 import android.support.v4.app.FragmentManager;
 
@@ -47,9 +48,15 @@ public class ${className}Activity extends BaseActivity {
 
     @Override
     public FragmentManager getCurrentFragmentManager(){
-        if(fragment != null && fragment.isAdded()){
-             return fragment.getChildFragmentManager();
-        }
-         return getSupportFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
+                if(fm.getFragments() != null){
+                    for (Fragment frag :
+                            fm.getFragments()) {
+                        if(frag != null && frag.isVisible() && frag instanceof TabbarFragment){
+                            return ((TabbarFragment) frag).getCurrentFragmentManager();
+                        }
+                    }
+                }
+        return getSupportFragmentManager();
     }
 }
